@@ -1,12 +1,12 @@
-Searsia web client
-==================
-http://searsia.org
+NLnet Search web client
+=======================
+
+Showing in-browser search for NLnet.
+A fork of https://github.com/djoerd/searsiaclient
 
 Usage: Open `index.html` in a web browser... done.
 
-The client will automatically connect to the Searsia server of
-[University of Twente Search][1]. To connect to another server, 
-edit the variable `API_TEMPLATE` in the file `js/searsia.js`.
-
-[1]: https://search.utwente.nl/searsia/search "UT Search Server"
-
+The directory [www](tree/master/www/) contains instructions for
+downloading web pages and creating the `nlnet.json` file.
+Change the value of `API_TEMPLATE` in `js/searsia.js` when running 
+this on your own site.

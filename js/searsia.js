@@ -26,17 +26,18 @@
 
 "use strict";
 
-var API_TEMPLATE = '';
+var API_TEMPLATE = 'https://djoerd.github.io/searsiaclient/nlnet.json';
 
 
 var AGG       = 1;   // 1=Aggregate results, 0=only boring links
 var pending   = 0;   // Number of search engines that are answering a query
 var nrResults = 0;   // Total number of results returned 
+var page      = 1;   // search result page
 var lang      = document.getElementsByTagName('html')[0].getAttribute('lang');    // used for language-dependent texts
 
 var logClickDataUrl = 0; // url to log click data, undefined or 0 to disable click logging
 var sendSessionIdentifier = 0; // do not send anonymous session id with each click
-var suggestionsOn = 1; // Enables suggestions, if they are provided via the API template's server.
+var suggestionsOn = 0; // Enables suggestions, if they are provided via the API template's server.
 
 var searsiaStore = {
 
@@ -713,13 +714,13 @@ function moreResultsText() {
 
 
 function noMoreResultsText() {
-    var result = "No more results.";
+    var result = "Done.";
     if (lang === "nl") {
-        result = "Geen andere resultaten.";
+        result = "Klaar.";
     } else if (lang === "de") {
-        result =  "Keine Ergebnisse mehr.";
+        result =  "Fertig.";
     } else if (lang === "fr") {
-        result = "Pas plus de résultats.";
+        result = "Prêt.";
     }
     return result;
 }

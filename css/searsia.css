@@ -3,12 +3,16 @@ body {
 }
 
 .theme-search {
-  margin: 2em 1em;
+  margin: 4em 0em;
 }
 
 .theme-search > p > .btn {
   margin: 5px 0;
-} 
+}
+
+.theme-search h4 {
+  font-weight: normal;
+}
 
 .theme-home {
   padding-top: 10%;
@@ -120,17 +124,18 @@ body {
 }
 
 .search-result {
-  margin-bottom:48px;
+  margin-bottom:32px;
   max-width:860px;
 }
 
 .search-result > p > a {
-  color:green;
+  color: #689000;
   text-decoration: none;
 }
 
 .search-result > p > a:hover {
   text-decoration: underline;
+  background-color: white;
 }
 
 .search-result h4 {
@@ -216,6 +221,7 @@ body {
 
 .sub-result > .descr > a {
   text-decoration: underline;
+  background-color: white;
 }
 
 .sub-result > .url {
@@ -340,4 +346,15 @@ body {
 
 .tt-selectable:hover {
   background-color: #e7e7e7;
+}
+
+div#maincolumn_searsia
+{   float:left;
+    width:608px;
+    padding-left:1px;
+    padding-right:1px;
+}
+
+.row {
+  min-height: 4em;
 }

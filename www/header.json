@@ -1,0 +1,13 @@
+{
+"resource": {
+  "id": "nlnet",
+  "mimetype": "application\/searsia+json",
+  "favicon": "https:\/\/nlnet.nl\/logo\/logo-160x183.png",
+  "banner": "https:\/\/nlnet.nl\/logo\/banner-nf-160x60.png",
+  "name": "NLnet",
+  "rerank": "lm",
+  "apitemplate": "nlnet.json",
+  "urltemplate": "https:\/\/nlnet.nl\/search\/"
+},
+"searsia": "v1.0.0",
+"hits": [

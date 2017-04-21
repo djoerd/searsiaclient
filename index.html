@@ -1,59 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Searsia search client" />
-    <meta name="author" content="Searsia.org" />
-    <link id="favicon" rel="icon" type="image/png" href="images/search.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/searsia.css" />
-    <title>Search</title>
-  </head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
 
-  <body>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-    <div class="container theme-home">
+<head>
+<title>NLnet; Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index,follow" />
+<link rel="icon" type="image/x-icon" href="https://nlnet.nl/favicon3.ico">
+<link rel="stylesheet" type="text/css" href="https://nlnet.nl/nlnet.css" media="screen, projection" />
+<link rel="stylesheet" href="css/bootstrapform.css" />
+<link rel="stylesheet" href="css/searsia.css" />
+
+</head>
+<body class="search" id="topofpage">
+
+<div id="header">
+<a href="https://nlnet.nl/" title="Homepage"><img src="https://nlnet.nl/image/logo.gif" id="logo"
+ alt="NLnet"></a>
+<div id="header_right">
+
+</div>
+</div>
+
+<div id="navigation">
+<ul>
+<li><a href="https://nlnet.nl/"            id="home"
+       title="home page">home</a></li>
+<li><a href="https://nlnet.nl/foundation/" id="foundation"
+       title="presenting NLnet foundation">foundation</a></li>
+<li><a href="https://nlnet.nl/people/"     id="people"
+       title="the people behind the foundation" rel="me">people</a></li>
+<li><a href="https://nlnet.nl/foundation/can_do.html" id="funding"
+       title="what can NLnet do for you">funding possibilities</a></li>
+<li><a href="https://nlnet.nl/themes/"     id="themes"
+       title="areas of special focus">theme funds</a></li>
+<li><a href="https://nlnet.nl/project/current.html"   id="support"
+       title="projects we contribute to">projects we support</a></li>
+<li><a href="https://nlnet.nl/press/"      id="press"
+       title="press releases and other information for the press">press</a></li>
+<li><a href="https://nlnet.nl/contact/"    id="contact" rel="me"
+       title="how to reach us">contact</a></li>
+<li><a href=""  id="search" style="color:#98c000; text-decoration:none; border-bottom: 0px; background: #000;"
+       title="search">search</a></li>
+</ul>
+</div>
+
+
+<div id="headerimg">
+<img src="https://nlnet.nl/image/banner-960/steampunk.jpg" width="960" height="160" />
+</div>
+
+
+
+<div class="contentwrapper">
+
+<div id="leftcolumn_simple" class="inferior">
+&nbsp;
+</div>
+
+<div id="maincolumn_searsia">
+
+<h1>Search NLnet</h1>
+    <div class="theme-search">
 
       <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8">
-          <div class="searsia-home">
-            <div id="searsia-banner" style="display:none">
-            </div>
-            <form id="searsia-form" action="search.html">
-             <div id="searsia-suggestions" class="input-group input-group-lg">
-               <input id="searsia-input" type="text" name="q" class="form-control typeahead" value="" />
+        <div>
+          <div class="searsia-form">
+            <form id="searsia-form">
+             <div class="input-group">
+               <input id="searsia-input" type="text" name="q" class="form-control" value="" autocomplete="off" />
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit" value="submit">
-                    &nbsp;<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;
+                  <button id="searsia-submit" class="btn btn-default" type="submit" value="submit">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     <span class="sr-only">Search</span>
                   </button>
                 </span>
              </div>
             </form>
-            <div class="searsia-bottom-home" id="searsia-alert-bottom">
-            </div>
+          </div>
+          <div>
+            <div class="searsia-top" id="searsia-alert-top"></div>
+            <div>&nbsp;</div>
           </div>
         </div>
-        <div class="col-md-2">
+      </div>
+
+      <div class="row">
+        <div>
+          <div id="searsia-results-1"></div>
+          <div id="searsia-results-2"></div>
+          <div id="searsia-results-3"></div>
         </div>
       </div>
-   
+
+      <div class="row">
+        <div>
+          <div id="searsia-results-4"></div>
+          <div class="searsia-bottom" id="searsia-alert-bottom">
+            <noscript>Enable Javascript and use a modern browser to use Search</noscript>
+          </div>
+        </div>
+      </div>
+
     </div> <!-- /container -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/typeahead.bundle.min.js"></script>
-    <script src="js/searsia.js"></script>
-    <script> <!--
-      $(document).ready(function () {
+
+</div>
+
+<div id="rightcolumn" class="inferior">
+&nbsp;
+</div>
+
+<div id="footer">
+<ul>
+<li><a href="https://nlnet.nl/contact" id="footer_contact"
+       title="contact">contact form</a></li>
+<li>2017/04/03 by
+    <a href="mailto:webmaster@nlnet.nl">webmaster@nlnet.nl</a></li>
+<li id="footer_top"><a href="#topofpage"
+       title="back to top">back to top</a></li>
+</ul>
+<p>&nbsp;</p>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/searsia.js"></script>
+<script> <!--
+      $(document).ready(function(){
+        var params = { q: "", r: "" },
+            fragment =  window.location.hash.substring(1);
         initClient();
-        connectToServer();
+        if (fragment.startsWith('!')) {
+          params.q = fragment.substring(1);
+          if (params.q != '') {
+            fillForm(formQuery(params.q));
+            placeQuery(printableQuery(params.q));
+            getResources(params);
+          }
+        }
+        $("#searsia-submit").click(function(e) {
+          var params = { q: "", r: "" };
+          e.preventDefault();
+          searsiaCleanSheet();
+          params.q = encodedQuery($("#searsia-input").val());
+          window.location.hash = '#!' + params.q;
+          if (params.q != '') {
+            fillForm(formQuery(params.q));
+            placeQuery(printableQuery(params.q));
+            getResources(params);
+          }
+        }); 
       });
       -->
-    </script>
-  </body>
-</html>
+</script>
 
+</body>
+</html>
