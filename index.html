@@ -103,6 +103,8 @@
         </div>
       </div>
 
+      <div class="row" id="searsia-lastrow"></div>
+
     </div> <!-- /container -->
 
 </div>
@@ -145,7 +147,6 @@
           params.q = encodedQuery($("#searsia-input").val());
           window.location.hash = '#!' + params.q;
           if (params.q != '') {
-            fillForm(formQuery(params.q));
             placeQuery(printableQuery(params.q));
             getResources(params);
           }

@@ -370,6 +370,7 @@ function searsiaCleanSheet() {
     $('#searsia-results-3').empty();
     $('#searsia-results-4').empty();
     $('#searsia-alert-bottom').empty();
+    $('#searsia-lastrow').empty();
 }
 
 
@@ -415,7 +416,7 @@ function encodedQuery(text) {
 
 
 function fillForm(query) {
-    $('#searsia-form').find('input').attr('value', formQuery(query));
+    $('#searsia-input').val(formQuery(query));
 }
 
 
@@ -760,11 +761,32 @@ function moreResults(event) {
 }
 
 
+function extraSeachBoxForNLNet() {
+    $('#searsia-lastrow').append(
+        '<p>&nbsp;</p> <div class="searsia-form"> <form id="searsia-form-2"> <div class="input-group"> <input id="searsia-input-2" type="text" name="q" class="form-control" value="" autocomplete="off" /> <span class="input-group-btn"> <button id="searsia-submit-2" class="btn btn-default" type="submit" value="submit"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> <span class="sr-only">Search</span> </button> </span> </div> </form> </div>'
+    );
+    $("#searsia-submit-2").click(function (e) {
+        var params = { q: "", r: "" };
+        e.preventDefault();
+        params.q = encodedQuery($("#searsia-input-2").val());
+        searsiaCleanSheet();
+        window.location.hash = '#!' + params.q;
+        if (params.q != '') {
+            fillForm(formQuery(params.q));
+            placeQuery(printableQuery(params.q));
+            getResources(params);
+        }
+    });
+}
+
 function checkEmpty() {
     if (nrResults === 0) {
         $('#searsia-alert-bottom').html(noResultsText());
     } else if (searsiaStore.length <= 0) {
         $('#searsia-alert-bottom').html(noMoreResultsText());
+        if (!$('#searsia-results-3').is(':empty')) {
+            extraSeachBoxForNLNet();
+        }
     } else {
         $('#searsia-alert-bottom').html('<a href="#more" id="more-results">' + moreResultsText() + '</a>');
         $('#more-results').on('click', function (event) { moreResults(event); });
